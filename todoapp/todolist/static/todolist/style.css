@@ -1,0 +1,84 @@
+*{
+    box-sizing: border-box;
+    font-family: 'Roboto';
+}
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+.add-todo {
+    width: 100%;
+    padding: 1rem;
+    border: 1px solid rgba(0, 0, 0, .2);
+    margin-bottom: .2rem;
+}
+.input-group {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin: .5rem 0;
+}
+input[type='text'] {
+    padding: .4rem .8rem;
+    font-size: 1rem;
+    width: min(100%, 420px);
+    border-radius: .3rem;
+    outline: none;
+    border: 1px solid rgba(0, 0, 0, .5);
+}
+button {
+    padding: .4rem .8rem;
+    font-family: 'Roboto';
+    font-weight: 500;
+    font-size: 1rem;
+    cursor: pointer;
+    outline: none;
+    background: rgb(73, 103, 236);
+    color: white;
+    border: none;
+    border-radius: .4rem;
+}
+.list-item {
+    border-bottom: 1px solid rgba(0, 0, 0, .2);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 5rem;
+}
+.item-title {
+    font-size: 1rem;
+    color: rgba(0, 0, 0, .9);
+    padding: .5rem 1rem;
+}
+.item-title.completed {
+    border-left: 5px solid green !important;
+    text-decoration: line-through;
+}
+a.del-btn {
+    color: white;
+    background: red;
+    padding: .2rem .4rem;
+    border-radius: .3rem;
+    font-weight: bold;
+    font-size: 1.2rem;
+    text-decoration: none;
+}
+
+a.update {
+    color: white;
+    background: green;
+    padding: .2rem .3rem;
+    border-radius: .3rem;
+    font-weight: bold;
+    font-size: 1.2rem;
+    text-decoration: none;
+    margin-right: .3rem;
+}
+
+.actions {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-items: center;
+}
