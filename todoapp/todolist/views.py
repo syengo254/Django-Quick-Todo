@@ -1,5 +1,6 @@
 from django.shortcuts import redirect, render
 from django.views.decorators.http import require_http_methods
+from django.contrib import messages
 
 from .models import Todo
 
@@ -22,8 +23,11 @@ def update_todo(request, pk):
 @require_http_methods(["POST"])
 def add_todo(request):
     title = request.POST.get('title')
-    todo = Todo(title=title)
-    todo.save()
+    if title == None or title == '':
+        messages.error(request, 'Some errors on input')
+    else:
+        todo = Todo(title=title)
+        todo.save()
 
     return redirect('todolist:index')
 
